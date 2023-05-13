@@ -1,24 +1,19 @@
 import React from 'react';
 import { Card } from '../Card/';
-import { useFetchCats } from '../../customHooks/useFetchCats';
-import './random.css'
+import { useFetchDogs } from '../../customHooks/useFetchDogs';
+import './random.css';
 function RandomFetchs() {
-	const { cats, isLoading } = useFetchCats();
+	const { dogs, isLoading } = useFetchDogs();
 	return (
-		<div>
-			<h1>random fetchs</h1>
-
+		<div className="random-container">
 			<ul className="card-container">
 				{isLoading ? (
 					<p>cargando</p>
 				) : (
-					cats.map(cat => (
-						<li>
-							<Card key={cat.id} cat={cat} />
-						</li>
-					))
+					dogs.map(dog => <Card key={dog.id} dog={dog} />)
 				)}
 			</ul>
+			<button>cargar mas perritos</button>
 		</div>
 	);
 }

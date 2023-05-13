@@ -1,21 +1,21 @@
 import { useState, useEffect } from 'react';
 
-export const useFetchCats = () => {
-	const [cats, setCats] = useState([]);
+export const useFetchDogs = () => {
+	const [dogs, setDog] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
 
 	useEffect(() => {
-		const fetchCats = async () => {
+		const fetchDog = async () => {
 			setIsLoading(true);
 			const response = await fetch(
 				'https://api.thedogapi.com/v1/images/search?limit=20'
 			);
 			const data = await response.json();
-			setCats(data);
+			setDog(data);
 			setIsLoading(false);
 		};
-		fetchCats();
+		fetchDog();
 	}, []);
 
-	return { cats, isLoading };
+	return { dogs, isLoading };
 };
