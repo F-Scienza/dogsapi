@@ -1,4 +1,41 @@
-.header{
+.header {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    background-color: rgba(999, 999, 999, 0.9);
+    align-items: center;
+    height: 36px;
+    width: 100%;
+    box-shadow: 0px -4px 8px black;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-linkfavs {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    justify-self: flex-end;
+    position: relative;
+}
+
+.nav-lengthfavs {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.8em;
+    text-align: center;
 }

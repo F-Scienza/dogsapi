@@ -1,0 +1,10 @@
+.not-found{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.confused-img{
+    width: 200px;
+    justify-self: center;
+}
