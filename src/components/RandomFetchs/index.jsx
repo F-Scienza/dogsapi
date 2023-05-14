@@ -8,7 +8,7 @@ function RandomFetchs() {
 	return (
 		<div className="random-container">
 			<ul className="card-container">
-				{isLoading&dogs.length>0 ? (
+				{isLoading && dogs.length==0? (
 					<p>cargando</p>
 				) : (
 					dogs.map(dog => <Card key={dog.id} dog={dog} />)

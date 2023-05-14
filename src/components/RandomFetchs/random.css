@@ -18,12 +18,14 @@ li:last-child {
 .random-btn-load{
 	width: 240px;
 	height: 36px;
+	margin-bottom: 12px;
 	border-radius: 18px;
 	border: none;
 	background-color: black;
 	color: white;
 	cursor: pointer;
 	transition: all 0.2s;
+
 }
 .random-btn-load:hover{
 	background-color: cornflowerblue;
