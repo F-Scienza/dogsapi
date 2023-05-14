@@ -8,8 +8,9 @@
 .card-img {
 	max-height: 100%;
 	min-width: 100%;
-	object-fit: cover;
+	object-fit:cover;
 	vertical-align: bottom;
+    transition: all 2s ease-out;
 }
 .fav-btn{
     border-radius: 50%;

@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 export const useFetchFavs = () => {
 	const [favDogs, setFavDogs] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
-
 	useEffect(() => {
 		const fetchFavDogs = async () => {
 			setIsLoading(true);
@@ -19,3 +18,7 @@ export const useFetchFavs = () => {
 
 	return { favDogs, isLoading };
 };
+
+export const handleAddToFavorites = (idDog)=>{
+	console.log(`agregado ${idDog} a favoritos`)
+}

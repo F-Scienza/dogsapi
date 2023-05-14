@@ -3,17 +3,18 @@ import { Card } from '../Card/';
 import { useFetchDogs } from '../../customHooks/useFetchDogs';
 import './random.css';
 function RandomFetchs() {
-	const { dogs, isLoading } = useFetchDogs();
+	const { handleLoadMore, dogs, isLoading } = useFetchDogs();
+
 	return (
 		<div className="random-container">
 			<ul className="card-container">
-				{isLoading ? (
+				{isLoading&dogs.length>0 ? (
 					<p>cargando</p>
 				) : (
 					dogs.map(dog => <Card key={dog.id} dog={dog} />)
 				)}
 			</ul>
-			<button>cargar mas perritos</button>
+			<button onClick={handleLoadMore} className='random-btn-load'>cargar mas perritos</button>
 		</div>
 	);
 }
