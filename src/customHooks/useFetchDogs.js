@@ -9,19 +9,22 @@ export const useFetchDogs = () => {
 	const [isLoading, setIsLoading] = useState(false);
 	const handleLoadMore = () => {
 		setPage(page + 1);
+		fetchDog()
 	};
-	useEffect(() => {		
-		const fetchDog = async () => {
-			setIsLoading(true);
-			const response = await fetch(
-				`https://api.thedogapi.com/v1/images/search?limit=5&page=${page}`
-			);
-			const data = await response.json();
-			setDogs([...dogs, ...data]);
-			setIsLoading(false);
-		};
+
+	const fetchDog = async () => {
+		setIsLoading(true);
+		const response = await fetch(
+			`https://api.thedogapi.com/v1/images/search?limit=3&page=${page}`
+		);
+		const data = await response.json();
+		setDogs([...dogs, ...data]);
+		setIsLoading(false);
+	};
+
+	useEffect(() => {	
 		fetchDog();
-	}, [page]);
+	}, []);
 
 	return { handleLoadMore, dogs, isLoading };
 };
