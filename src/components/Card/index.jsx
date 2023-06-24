@@ -1,14 +1,24 @@
 import React from 'react';
 import './card.css';
 import like from '../../asets/like.png';
-import { handleAddToFavorites } from '../../customHooks/useFetchFav';
+import { useContext } from 'react';
+import { DogsContext } from '../../context';
+
 function Card({ dog }) {
-	const addToFav = ()=>{handleAddToFavorites(dog.id)}
+	const context = useContext(DogsContext); // traemos el contexto
+	const { favDogs, setFavDogs } = context;
+
+
+	const handleAddToFav = () => {
+		// agregamos al contexto
+		setFavDogs([...favDogs, dog])
+	};
+
 	return (
 		<div className="card-dogs">
-			<img className="card-img" key={dog.id} src={dog.url} alt="cat" />
-			<button onClick={addToFav} className="fav-btn">
-				<img className='fav-btn-img' src={like} alt="like" />
+			<img className="card-img" key={dog.id} src={dog.url} alt="dog" />
+			<button onClick={handleAddToFav} className="fav-btn">
+				<img className="fav-btn-img" src={like} alt="like" />
 			</button>
 		</div>
 	);

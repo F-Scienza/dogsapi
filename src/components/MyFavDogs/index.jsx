@@ -1,18 +1,24 @@
-import React from 'react';
-import { useFetchFavs } from '../../customHooks/useFetchFav';
-import confused from '../../asets/perritoconfundido.jpg'
-import './myfav.css'
+import React, { useContext } from 'react';
+import { Card } from '../Card/';
+import confused from '../../asets/perritoconfundido.jpg';
+import './myfav.css';
+import { DogsContext } from '../../context';
 
 function MyFavDogs() {
-	const { favDogs, isLoading } = useFetchFavs();
+	const context = useContext(DogsContext)
+	const { favDogs } = context
 
 	return (
 		<div className="random-container">
 			<ul className="card-container">
-				{isLoading ? (
-					<div className='not-found'>
+				{favDogs.length == 0 ? (
+					<div className="not-found">
 						<h1>ups...</h1>
-						<img className='confused-img' src={confused} alt="perrito confundido" />
+						<img
+							className="confused-img"
+							src={confused}
+							alt="perrito confundido"
+						/>
 						<h1>Puede que no tengas favoritos</h1>
 					</div>
 				) : (
