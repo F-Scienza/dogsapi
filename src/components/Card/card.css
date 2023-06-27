@@ -33,3 +33,15 @@
 .fav-btn-img{
     width: 100%;
 }
+.faved {
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    opacity: 1;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s;
+}
