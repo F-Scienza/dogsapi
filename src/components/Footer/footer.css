@@ -28,28 +28,20 @@
     font-size: 14px;
     color: #cacdd2;
 }
-.socials{
-    list-style: none;
+.social-container{
+    width: 100%;
+    height: 3em;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content:space-evenly;
 }
-.socials li{
-    height: auto;
-    margin: 0 10px;
-}
-.socials a{
+.sociallink{
     text-decoration: none;
-    color: #fff;
-    border: 1.1px solid white;
-    padding: 5px;
-    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+    transition: all .2s;
 }
-.socials a i{
-    font-size: 1.1rem;
-    width: 20px;
-    transition: color .4s ease;
-}
-.socials a:hover i{
-    color: aqua;
+.sociallink:hover{
+    font-weight: 600;
+    font-size: 1.1em;
 }

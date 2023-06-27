@@ -21,12 +21,12 @@ function Card({ dog }) {
 	const faved = favDogs.includes(dog) ? 'faved' : 'fav-btn';
 
 	return (
-		<div className="card-dogs">
+		<li className="card-dogs">
 			<img className="card-img" key={dog.id} src={dog.url} alt="dog" />
 			<button onClick={handleFavs} className={faved}>
 				<img className="fav-btn-img" src={like} alt="like" />
 			</button>
-		</div>
+		</li>
 	);
 }
 

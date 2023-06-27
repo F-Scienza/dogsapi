@@ -1,3 +1,8 @@
+.fav-container{
+    padding: 5%;
+    display: inline-block;
+    inline-size: fit-content;
+}
 .not-found{
     display: flex;
     flex-direction: column;

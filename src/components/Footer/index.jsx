@@ -1,19 +1,26 @@
 import React from 'react';
 import './footer.css';
+import { Link } from 'react-router-dom';
 function Footer() {
 	return (
 		<div className="footer-container">
 			<div className="footer-content">
 				<h3>F-Sienza</h3>
 				<p>Aplicación desarrollada consumiendo la API de perritos </p>
-				<ul className="socials">
-					<li>
+				<div className="social-container">
+					<Link
+						className="sociallink"
+						to="https://github.com/F-Scienza/dogsapi"
+					>
+						Codigo
+					</Link>
+					<Link
+						className="sociallink"
+						to="https://github.com/F-Scienza/dogsapi"
+					>
 						Linkedin
-					</li>
-					<li>
-						github
-					</li>
-				</ul>
+					</Link>
+				</div>
 			</div>
 		</div>
 	);

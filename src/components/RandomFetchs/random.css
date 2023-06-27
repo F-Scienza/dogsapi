@@ -8,9 +8,10 @@
 	align-items: center;
 }
 ul {
+	padding: 0;
+	width: 95%;
 	display: flex;
 	flex-wrap: wrap;
-    padding: 20px;
 }
 li:last-child {
 	flex-grow: 10;

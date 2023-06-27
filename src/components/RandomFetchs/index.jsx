@@ -14,7 +14,9 @@ function RandomFetchs() {
 					dogs.map(dog => <Card key={dog.id} dog={dog} />)
 				)}
 			</ul>
-			<button onClick={handleLoadMore} className='random-btn-load'>cargar mas perritos</button>
+			<button onClick={handleLoadMore} className="random-btn-load">
+				cargar mas perritos
+			</button>
 		</div>
 	);
 }

@@ -1,9 +1,12 @@
 .card-dogs {
+    display: inline-block;
 	height: 30vh;
+    width: auto;
 	flex-grow: 1;
 	list-style: none;
 	padding: 5px;
     position: relative;
+    overflow-x: hidden;
 }
 .card-img {
 	max-height: 100%;
