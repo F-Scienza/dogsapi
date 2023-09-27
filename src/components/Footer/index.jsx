@@ -16,7 +16,7 @@ function Footer() {
 					</Link>
 					<Link
 						className="sociallink"
-						to="https://github.com/F-Scienza/dogsapi"
+						to="https://www.linkedin.com/in/facundo-scienza/"
 					>
 						Linkedin
 					</Link>
