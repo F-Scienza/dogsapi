@@ -1,10 +1,10 @@
 .card-dogs {
     display: inline-block;
 	height: 30vh;
-    width: auto;
+    max-width: 350px;
 	flex-grow: 1;
 	list-style: none;
-	padding: 5px;
+	padding: 12px;
     position: relative;
     overflow-x: hidden;
 }
