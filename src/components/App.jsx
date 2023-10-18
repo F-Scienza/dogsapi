@@ -1,12 +1,12 @@
 import './app.css';
 import { Footer } from './Footer';
 import { Header } from './Header/Index';
-import { Router } from './Routes';
+import { RandomFetchs } from './RandomFetchs';
 function App() {
 	return (
 		<div className="app">
 			<Header />
-			<Router/>
+			<RandomFetchs/>
 			<Footer />
 		</div>
 	);
